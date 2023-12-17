@@ -9,7 +9,7 @@ export default function App() {
         <footer>
           This project is created by Myo Pa Pa Kyaw and is
           <a
-            href="https://github.com/Cyntra-22/react_weather_app_shecodes5"
+            href="https://github.com/Cyntra-22/react_weather_app_shecodes5" 
             
           >
             {" "}
