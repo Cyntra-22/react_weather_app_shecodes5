@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="App ">
       <div className="container">
-        <Weather />
+        <Weather city="London"/>
         <footer>
           This project was coded by{" "}
           <a href="https://grand-moxie-36c236.netlify.app/"> Myo Pa Pa Kyaw</a>{" "}
