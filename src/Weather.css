@@ -28,9 +28,10 @@
     list-style: none;
 }
 
-.Weather img{
-    margin-right: 10px;
-    width: 100px;
+.Weather .image{
+    padding-left: 5px;
+    padding-top: 8px;
+    width: 80px;
 }
 
 

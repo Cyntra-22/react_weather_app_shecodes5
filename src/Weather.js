@@ -3,6 +3,7 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 
+
 export default function Weather(props) {
   const [weather, setWeather] = useState({ ready: false });
   const [city, setCity] = useState(props.city);
@@ -16,9 +17,8 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       city: response.data.name,
       description: response.data.weather[0].description,
-      iconUrl: `https://openweathermap.org/img/wn/${
-                    response.data.weather[0].icon
-                  }@2x.png`,
+      icon: response.data.weather[0].icon,
+
       date: new Date(response.data.dt * 1000),
     });
   }
