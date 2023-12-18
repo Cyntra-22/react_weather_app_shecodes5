@@ -3,23 +3,27 @@ import "./WeatherForecast.css";
 import axios from "axios";
 import WeatherForecast_Day from "./WeatherForecastDay";
 
-
 export default function WeatherForecast(props) {
   let [Loaded, setLoaded] = useState(false);
   let [Forecast, setForecast] = useState({});
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
-    
   }
 
   if (Loaded) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-           <WeatherForecast_Day data={Forecast[0]}/>
-          </div>
+          {Forecast.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecast_Day data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
